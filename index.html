@@ -1,1 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Jude moon">
+    <title>Visualización de datos del Titanic</title>
+
+    <!-- load d3 and dimple libraries -->
+    <script src="http://d3js.org/d3.v4.min.js"></script>
+    <script src="http://dimplejs.org/dist/dimple.v2.3.0.min.js"></script>
+
+    <!-- add styles to text and graphics -->
+    <style>
+        h1 {
+            background-color: grey;
+            color: floralwhite;
+            font-family: Helvetica, sans-serif;
+            width: 100%;
+            height: 80px;
+            text-align: center;
+            padding-top: 30px;
+        }
+        h2 {
+            font-size: 1.4em;
+            text-transform: uppercase;
+            font-family: Helvetica;
+            color: #000;
+            margin-top: 0;
+        }
+        h3 {
+            font-family: Helvetica, sans-serif;
+            text-align: center;
+        }
+        h4 {
+            font-family: Helvetica, sans-serif;
+            text-align: left;
+        }
+        div.text {
+            font-family: Helvetica;
+            padding: 5px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="main-title">Análisis de tasa de abandono </h1>
+    <h4 class="main-autor">Nombre: De Luca Mauricio</h3>
+    <h4 class="main-url">Url: <a href="https://seminariovisualizacion.stackblitz.io">https://seminariovisualizacion.stackblitz.io/</a></h3>
+    <h4 class="main-fuente">Fuente: <a href="https://www.kaggle.com/blastchar/telco-customer-churn">https://www.kaggle.com/blastchar/telco-customer-churn</a></h3>
+    <h4 class="main-fecha">Fecha: 3/12/2020</h4>
+    <br>
+    <br>
+
+    <!-- add intro text to the page body -->
+    <div class="summary">
+        <h2 class="text-title">Resumen</h2>
+        <div class="text">
+El objetivo de este proyecto es realizar un análisis sobre una base de datos creada por IBM en la que se relevó información sobre 7043 clientes con servicio de telecomunicaciones, e intentar encontrar patrones y correlaciones entre las mismas, teniendo en cuenta la variable target que es "Churn", que viene a ser si los clientes han abandonado el servicio o no.
+<br>
+<br>
+Para el mismo se utilizarán los gráficos, herramientas y técnicas vistas en la asignatura visualización de datos del master de Big Data.
+<br>
+<br>
+La audiencia sería para presentar en una reunión de directivos y exponer la situación actual, para que se puedan tomar medidas correctivas. 
+<br>
+<br>
+El objetivo consiste en presentar un trabajo práctico de ejemplo para poder aprobar el Seminario de dicha asignatura y usarlo como una continuación de los trabajos realizados en materias anteriores.
+              
+
+
+</br>
+</br>
+</br>
+</div>
+</div>
+
+    <!-- add data visualization -->
+    <div class="plot">
+        <!-- The first bar chart -->
+        <h2 class="plot-title">Análisis de correlación de variables</h2>
+        <div class="text">
+          El primer gráfico analiza la correlación entre las variables cuantitativas de la base de datos. Se puede ver en el mismo que las variables MonthlyCharges y tenure(que es la cantidad de meses que los clientes tienen en el servicio) estan relacionadas con la variable TotalCharges.
+          En cambio la variable tenure (meses con el servicio) tiene una relación inversa con la variable churnl (tasa de abandono), lo que muestra que mientras más tiempo cuentan con el servicio es menos probable que lo cambien por otro prestador.
+          </br>
+          Este gráfico está hecho con la librería seaborn de python en un cuaderno jupyter notebook.
+
+        </div>  
+
+        <div id="plotContainer1">
+          </br>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/K9kW5VN/correlacion.png" alt="correlacion" border="0"></div></a>
+
+    <div class="plot">
+          <h2 class="plot-title">Distribución de la edad del servicio según dos categorías Churn y SeniorCitizen </h2>
+           <div class="text">
+          Este gráfico muestra la distribución de los clientes según si son clientes mayores o no (SeniorCitizen 1,0) y según si han abandonado el servicio o no(churnl 1,0)
+          </br>
+          En el mismo se observa como los clientes mayores tienden menos a abandonar el servicio y todavía menos con mas meses con el servicio.
+          En cambio los clientes jóvenes son más susceptibles a cambiar el servicio por otro, y más aun en los primeros meses que lo contratan.
+          Este gráfico está hecho con la librería seaborn de python en un cuaderno jupyter notebook.
+          </div> 
+
+        </div> 
+        <div id="plotContainer2">
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/QMcCsw2/scaleplot.png" alt="scaleplot" border="0"></a><br /></a>
+        </div>
+  
+<div class="plot">
+          <h2 class="plot-title">Cajas de bigotes</h2>
+           <div class="text">
+          Este tipo de gráfico muestra la distribución en este caso de la variable tenure(meses en el servicio) con respecto a la mediana y que tan dispersos de la misma se encuentran según el tipo de contrato que poseen los clientes
+          </br>
+          Aquí se ve como los clientes están agrupados segun la tendencia del contrato que posean, en el caso de la caja azul con clientes con contrato mensual, vemos como están agrupados entre 0 y 30 meses siendo la mediana un año aproximadamente.
+          En cambio en la naranja y vere que son contratos por uno y dos años respectivamente, se ve que tienden a pasar dicho umbral y su estadia con el servicio aumenta en promedio 1 año más en cada caso.
+          </br>
+          </br>
+          Esto es generalizando las distribuciones, por supuesto que hay excepciones a esta regla. Pero lo que se intenta mostrar es los patrones encontrados.
+          </div> 
+
+        </div> 
+        <div id="plotContainer2">
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/Y3j6b6M/boxplot.png" alt="boxplot" border="0"></a></a>
+        </div>
+
+
 <div id="app"></div>
