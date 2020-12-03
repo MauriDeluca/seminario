@@ -58,7 +58,7 @@
     <div class="summary">
         <h2 class="text-title">Resumen</h2>
         <div class="text">
-El objetivo de este proyecto es realizar un análisis sobre una base de datos creada por IBM en la que se relevó información sobre 7043 clientes con servicio de telecomunicaciones, e intentar encontrar patrones y correlaciones entre las mismas, teniendo en cuenta la variable target que es "Churn", que viene a ser si los clientes han abandonado el servicio o no.
+El objetivo de este proyecto es realizar un análisis sobre una base de datos creada por IBM en la que se relevó información sobre 7043 clientes con servicio de telecomunicaciones, e intentar encontrar patrones y correlaciones entre las variables de la misma, teniendo en cuenta la variable target que es "Churn", que es si los clientes han abandonado el servicio o no.
 <br>
 <br>
 Para el mismo se utilizarán los gráficos, herramientas y técnicas vistas en la asignatura visualización de datos del master de Big Data.
@@ -121,9 +121,67 @@ El objetivo consiste en presentar un trabajo práctico de ejemplo para poder apr
           </div> 
 
         </div> 
-        <div id="plotContainer2">
+        <div id="plotContainer3">
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/Y3j6b6M/boxplot.png" alt="boxplot" border="0"></a></a>
         </div>
+<div class="plot">
+          <h2 class="plot-title">Gráfico de tarta</h2>
+           <div class="text">
+          Utilizo el tipo de gráfico circular o de tarta para representar las proporciones entre los clientes que abandonan el servicio y los que no, según el tipo de contrato. Este tipo de gráfico es adecuado en este caso para representar proporciones en las que no importa la precisión.  <br>
+          Se pretende complementar el gráfico anterior, mostrando la comparación entre los tres tipos de contratos, en los cuales se ve a simple vista que la modalidad mes a mes es la que mayor tasa de abandono de clientes presenta.
+          </br>
+          Se han utilizado la herramienta tableau para este y los gráficos de barras siguientes
+          </br>
 
+        </div> 
+        <div id="plotContainer4">
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/Jc8kjnT/grafico-de-torta.png" alt="grafico-de-torta" border="0"></a>
+        </div>
+<div class="plot">
+          <h2 class="plot-title">Gráfico de barras apiladas</h2>
+           <div class="text">
+          Utilizo el gráfico de barras apiladas porque me parece buen recurso para comparar la cantidad de clientes que abandonan o no el servicio y el método de pago que utilizan para pagar el mismo.
+          </br>
+          Vemos que para el caso del pago mediante el cheque electrónico hay una mayor proporción (casi 50%) de clientes que se quedan y que abandonan el servicio.
+          Esto nos puede llevar a pensar que ese método de pago podría estar generando un problema el cual no se tiene conocimiento y hace que los clientes no estén conformes con el servicio.
+          </br>
+
+        </div> 
+        <div id="plotContainer5">
+<a href="https://ibb.co/0hJC6Wq"><img src="https://i.ibb.co/PwCcPbx/Churn-segun-metodo-de-pago.png" alt="Churn-segun-metodo-de-pago" border="0"></a>
+        </div>
+<div class="plot">
+          <h2 class="plot-title">Gráfico de barras </h2>
+           <div class="text">
+          Por último se presenta un gráfico que muestra la tasa de abandono según los meses que llevan los clientes con el servicio.
+          Se puede utilizar como complemento al gráfico n°2.
+          </br>
+          Con este tipo de gráfica se puede ver rápidamente como va variando la tasa de abandono, que en el primer mes es mayor la proporción de los que abandonan el servicio con respecto a los que no.<br>
+          A partir de los 6 meses esa tendencia cambia y se invierte, y a partir de los 2 años ya es mucho mayor la proporción de los clientes que se quedan con nuestro servicio con respecto a los que abandonan el mismo (3 a 1).
+          </br>
+
+        </div> 
+        <div id="plotContainer6">
+<a href="https://ibb.co/XWyCcDh"><img src="https://i.ibb.co/4FsVh26/churn-segun-tenure.png" alt="churn-segun-tenure" border="0"></a>
+        </div>
+
+<!-- add outro text to the page body -->
+    <div class="Conclusiones">
+        <h2 class="text-title">Conclusiones</h2>
+        <div class="text">
+            <p>Teniendo en cuenta todo lo expuesto se pueden sacar algunas conclusiones gracias al trabajo realizado.</br>
+            - Que los clientes tienden a abandonar el servicio en los primeros meses de contratado</br>
+            - Que los clientes jóvenes son más propensos a abandonar el servicio.</br>
+            - Que cuando los clientes tienen contratos mensuales tienden a ser menos leales y cambiar de prestador de servicio.</br>
+            - Que el método de pago con cheque electrónico produce una alta tasa de abandono.</br>
+            </br>
+            En base a todas estas conclusiones podrían tomarse medidas como, campañas específicas para el segmento jóven u ofertas para los potenciales clientes y captarlos los primeros meses, o hacer bonificaciones en contratos más largos.</br>
+            Realizar un análisis de el medio de pago de cheque electrónico.
+            </br></br>
+            Así mismo se podria seguir explorando la base de datos para encontrar más patrones entre las variables, eso podría ser para un trabajo futuro más específico y con otra audiencia.
+
+            </p>
+            </br>
+        </div>
 
 <div id="app"></div>
